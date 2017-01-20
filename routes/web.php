@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function (){
     Auth::routes();
     Route::get('/', 'DashboardController@index');
     Route::get('profile', 'ProfileController@index');
+    Route::post('profile', 'ProfileController@update');
 });

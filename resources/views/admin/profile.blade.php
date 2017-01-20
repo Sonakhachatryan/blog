@@ -17,17 +17,18 @@
             <div class="grid-form1">
                 <form class="form-horizontal" method="post" action="{{ url('admin/profile') }}" enctype="multipart/form-data">
 
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label hor-form">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" value="{{ $admin->user()->name }}">
+                            <input type="text" class="form-control" id="name" name="name" value="{{ $admin->user()->name }}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label hor-form">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" value="{{ $admin->user()->email }}">
+                            <input type="email" class="form-control" id="inputEmail3" name="email"value="{{ $admin->user()->email }}">
                         </div>
                     </div>
 
@@ -35,8 +36,8 @@
                         <label  class="col-sm-2 control-label hor-form">Avatar</label>
                         <div class="col-sm-10">
                             <label for="image" class="image_label">+</label>
-                            <img id="img_prw" src="{{ 'images/admin'.$admin->user()->image }}" class="admin_img"/>
-                            <input type="file" class="form-control hidden" id="image">
+                            <img id="img_prw" src="{{ url('images/admin/'.$admin->user()->image) }}" class="admin_img"/>
+                            <input type="file" class="form-control hidden" id="image" name="image">
                         </div>
                     </div>
 

@@ -147,7 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span
-                                    class=" name-caret">{{ $admin->user()->name }}<i class="caret"></i></span><img src="{{ url('images/admin' . $admin->user()->image) }}"></a>
+                                    class=" name-caret">{{ $admin->user()->name }}<i class="caret"></i></span><img src="{{ url('images/admin/' . $admin->user()->image) }}" class="nav_pic"></a>
                         <ul class="dropdown-menu " role="menu">
                             <li><a href="{{ url('admin/profile') }}"><i class="fa fa-user"></i>Edit Profile</a></li>
                             <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
@@ -188,8 +188,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </ul>
                         </li>
                         <li>
-                            <a href="inbox.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span
-                                        class="nav-label">Inbox</span> </a>
+                            <a href="{{ url('admin/posts') }}" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span
+                                        class="nav-label">Posts</span> </a>
                         </li>
 
                         <li>

@@ -128,3 +128,12 @@
     left: 113px;
 }
 
+.nav_pic{
+    width: 65px;
+    height: 65px;
+}
+
+.miban{
+    width: auto !important;
+}
+

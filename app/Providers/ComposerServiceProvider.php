@@ -13,8 +13,14 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(
-            ['admin.dashboard','admin.profile'], 'App\Http\ViewComposers\AdminComposer'
+        view()->composer([
+            'admin.dashboard',
+            'admin.profile',
+            'admin.posts.create',
+            'admin.posts.edit',
+            'admin.posts.index',
+            'admin.posts.show',
+        ], 'App\Http\ViewComposers\AdminComposer'
         );
 
     }

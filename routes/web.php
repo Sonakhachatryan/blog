@@ -11,9 +11,24 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+
+Route::group(['prefix' => 'templates'], function () {
+    Route::get('{page}', function ($page) {
+        return view('templates.' . $page)->render();
+    });
+});
+
+Route::group(['prefix' => 'templates'], function () {
+    Route::get('{folder}/{page}', function ($folder, $page) {
+        return view('templates.' . $folder . '.' . $page)->render();
+    });
+});
+
+
 
 Auth::routes();
 
@@ -24,4 +39,10 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function (){
     Route::get('/', 'DashboardController@index');
     Route::get('profile', 'ProfileController@index');
     Route::post('profile', 'ProfileController@update');
+    Route::resource('posts', 'PostsController',['except' => ['store','create']]);
 });
+
+
+
+
+

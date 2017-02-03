@@ -136,10 +136,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- footer -->
 <script src="{{ url('bower_components/angular/angular.js') }}"></script>
+<script src="{{ url('bower_components/angular-bootstrap/ui-bootstrap.min.js') }}"></script>
 {{--<script src="{{ url('bower_components/angular-route/angular-route.js') }}"></script>--}}
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
 <script src="/angular/app.js"></script>
-<script src="/angular/controllers/DashboardController.js"></script>
+<script src="{{ url('angular/models/DashboardModel.js') }}"></script>
+<script src="{{ url('angular/controllers/DashboardController.js') }}"></script>
 
 </body>
 

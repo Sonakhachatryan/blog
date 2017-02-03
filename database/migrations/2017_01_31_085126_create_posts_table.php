@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->text('content');
             $table->string('author_id');
             $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

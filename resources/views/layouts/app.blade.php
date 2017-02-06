@@ -142,6 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="/angular/app.js"></script>
 <script src="{{ url('angular/models/DashboardModel.js') }}"></script>
 <script src="{{ url('angular/controllers/DashboardController.js') }}"></script>
+<script src="{{ url('angular/controllers/PostController.js') }}"></script>
 
 </body>
 

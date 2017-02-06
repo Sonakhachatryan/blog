@@ -9,9 +9,11 @@ class DashboardController extends Controller
 {
     public function getPosts()
     {
-        $posts = Post::all();
+        $posts = Post::with('author')->get();
         
         return response()->json(['success' => 1,'posts' => $posts]);
     }
+
+    
 }
 

@@ -2,10 +2,7 @@ var app = angular.module("myApp", ["ngRoute",'ui.bootstrap']);
 
 app.config(['$interpolateProvider', '$routeProvider','$locationProvider',
     function ($interpolateProvider, $routeProvider,$locationProvider) {
-        /*$locationProvider.html5Mode({
-         enabled: true,
-         requireBase: false
-         });*/
+       
         $interpolateProvider.startSymbol('<%');
         $interpolateProvider.endSymbol('%>');
 
@@ -13,6 +10,10 @@ app.config(['$interpolateProvider', '$routeProvider','$locationProvider',
             .when("/", {
                 templateUrl : "templates/dashboard",
                 controller : "DashboardController"
+            })
+            .when("/posts/:id",{
+                templateUrl : "templates/posts",
+                controller : "PostController"
             });
     }]);/**
  * Created by User on 1/23/2017.
